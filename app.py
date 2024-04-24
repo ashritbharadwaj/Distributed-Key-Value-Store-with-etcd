@@ -34,9 +34,9 @@ elif operation == 'Delete key':
         st.write('Key deleted successfully' if success else 'Key deletion failed')
 
 elif operation == 'Connect to etcd':
-    host = st.text_input('Enter host', value='localhost')
-    port = st.number_input('Enter port', value=2379)
+    # host = st.text_input('Enter host', value='localhost')
+    # port = st.number_input('Enter port', value=2379)
     if st.button('Connect'):
 
-        success = connect_to_etcd(host, port)
-        st.write(f'Connected successfully to {port}' if success else 'Connection failed')
+        success = connect_to_etcd(host='localhost', port=1111)
+        st.write(f'Connected successfully' if success else 'Connection failed')

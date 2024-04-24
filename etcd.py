@@ -80,7 +80,7 @@ def delete_etcd_key(etcd_client, key):
 
 if __name__ == "__main__":
 
-        etcd_client = connect_to_etcd("localhost",22379)
+        etcd_client = connect_to_etcd("localhost",1111)
         if etcd_client is not None:
             while True:
                 os.system('cls' if os.name == 'nt' else 'clear')
